@@ -7,13 +7,14 @@
 
 <h1>Stylists</h1>
 
+<h2>Create or select a stylist to add a client</h2>
+
 <ul>
-  @foreach(Stylist Stylist in Model)
+  @foreach(Stylist stylist in Model)
   {
     <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
   }
 </ul>
 
 <p>@Html.ActionLink("Add new stylist", "Create")</p>
-<p>@Html.ActionLink("See all stylists", "Index", "Stylists")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
